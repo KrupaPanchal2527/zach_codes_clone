@@ -1,0 +1,181 @@
+:root {
+    --navbar-height: 80px;
+    --brand-color: #ff572f;
+    --primary-text-color: #333;
+    --secondary-text-color: #999;
+    --font-base: muli,-apple-system,blinkmacsystemfont,segoe ui,helvetica,arial,sans-serif;
+    --animation-base: ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+button { 
+    background: transparent;
+    border: none; 
+    outline: none;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#main-header {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4vw;
+    width: 90%;
+    margin: auto;
+    height: var(--navbar-height);
+}
+
+.header-left>p {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary-text-color);
+}
+
+.header-left>p:hover{
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav>p {
+    margin: 0 1.5rem;
+    font-weight: 700;
+}
+
+nav>p:hover {
+    cursor: pointer;
+    margin: 0 1.5rem;
+    font-weight: 700;
+}
+
+.search-icon {
+    height: 25;
+}
+
+.header-right>button {
+    font-weight: 700;
+}
+
+.header-right button+button {
+    margin-left: 2rem;
+}
+
+.header-right>.subs {
+    color: var(--brand-color);
+}
+
+.sticky-header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 50px;
+    background-color: hsla(0,0%,100%,.8);
+    transition: transform 3s var(--animation-base);
+    transform: translateY(0px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.sticky-title {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-right: 1rem;
+    color: var(--darker-gray-color);
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sticky-track {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--brand-color);
+    transform: translateX(10)
+}
+
+main {
+    padding-top: 70px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+main .content-timestamp {
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+main .content-title {
+    margin: 0 0 1.5rem;
+    color: var(--darker-gray-color);
+    font-family: var(--font-base);
+    font-weight: 800;
+    margin-bottom: 0;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+}
+
+main .content-caption {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+main .content-data {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+}
+
+main .content-image{
+    margin-top: 2em;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    visibility: hidden;
+}
